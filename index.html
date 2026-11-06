@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoNo Catering | Premium Catering, Bartending & Event Hospitality</title>
+  <meta name="description" content="SoNo Catering provides premier catering, private bartending, and personalized event hospitality across Norwalk, Stamford, Greenwich, Fairfield County, CT and Manhattan, NY.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#A6192E',
+              burgundy: '#781522',
+              dark: '#1A1818',
+              charcoal: '#252525',
+              ivory: '#FAF7F2',
+              stone: '#EFECE6',
+              border: '#E5DFD7',
+              champagne: '#C7AE91'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom refined touches */
+    .bg-ivory-gradient {
+      background: linear-gradient(180deg, #FAF7F2 0%, #F5F0E8 100%);
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+    .backdrop-blur-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    /* Hide scrollbar for category tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-brand-ivory text-brand-charcoal font-sans antialiased selection:bg-brand-red selection:text-white flex flex-col min-h-screen">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-brand-dark text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 font-medium tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Now Booking 2026/2027 Celebrations & Private Gatherings
+        </span>
+        <span class="hidden md:inline text-stone-600">|</span>
+        <span class="hidden md:inline text-stone-400">Serving Fairfield County, CT & Manhattan, NY</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="tel:+12037224346" class="hover:text-white transition-colors flex items-center gap-1">
+          <i class="ph ph-phone text-brand-red"></i> (203) 722-4346
+        </a>
+        <a href="mailto:jiannacone77@aol.com" class="hover:text-white transition-colors hidden sm:flex items-center gap-1">
+          <i class="ph ph-envelope text-brand-red"></i> jiannacone77@aol.com
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100063505605727" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors text-stone-400" title="Visit Facebook Page">
+          <i class="ph-bold ph-facebook-logo text-base"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN STICKY NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-[#1e1e20]/80 backdrop-blur-nav border-b border-white/10 transition-all duration-300 shadow-lg shadow-black/20" id="siteHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- BRAND LOGO -->
+        <a href="#home" onclick="navigateTo('home')" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-11 h-11 rounded-full overflow-hidden bg-brand-red flex items-center justify-center shadow-md group-hover:scale-105 transition-all ring-2 ring-brand-red/40 relative">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/793fe12a-3f64-461c-bb99-c0273209f739.jpg" 
+                 alt="SoNo Catering Logo" 
+                 class="w-full h-full object-cover object-center scale-[1.08] transition-transform duration-300"
+                 onerror="this.parentElement.innerHTML='<i class=\'ph ph-cooking-pot text-xl text-white\'></i>'">
+          </div>
+          <div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-white group-hover:text-red-300 transition-colors flex items-baseline">
+              SoNo<span class="text-brand-red font-light italic ml-1">Catering</span>
+            </span>
+            <span class="block text-[10px] tracking-widest uppercase font-semibold text-stone-400">
+              & Bartending Services
+            </span>
+          </div>
+        </a>
+
+        <!-- DESKTOP NAVIGATION LINKS -->
+        <nav class="hidden lg:flex items-center space-x-1 font-medium text-sm text-stone-200">
+          <button onclick="navigateTo('home')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="home">Home</button>
+          <button onclick="navigateTo('catering')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="catering">Catering</button>
+          <button onclick="navigateTo('bartending')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="bartending">Bartending</button>
+          <button onclick="navigateTo('menu')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="menu">Menu</button>
+          <button onclick="navigateTo('shop')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors relative" data-page="shop">
+            Shop Trays
+            <span class="ml-1 inline-flex items-center px-1.5 py-0.2 text-[10px] font-bold bg-brand-red/20 text-red-300 rounded-full border border-red-500/30">Order</span>
+          </button>
+          <button onclick="navigateTo('events')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="events">Events & Gallery</button>
+          <button onclick="navigateTo('about')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="about">About Us</button>
+          <button onclick="navigateTo('contact')" class="nav-item px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors" data-page="contact">Contact</button>
+        </nav>
+
+        <!-- HEADER RIGHT ACTIONS -->
+        <div class="flex items-center gap-3">
+          <!-- Cart Drawer Button -->
+          <button onclick="toggleCartDrawer()" class="relative p-2.5 text-stone-300 hover:text-white hover:bg-white/10 rounded-full transition-colors focus:outline-none" aria-label="Open Order Cart">
+            <i class="ph ph-shopping-bag text-2xl"></i>
+            <span id="cartCountBadge" class="absolute -top-1 -right-1 w-5 h-5 bg-brand-red text-white text-[11px] font-bold rounded-full flex items-center justify-center shadow-sm">0</span>
+          </button>
+
+          <!-- Plan Your Event CTA -->
+          <button onclick="openEnquiryModal()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-red text-white font-medium text-sm hover:bg-brand-burgundy transition-all shadow-sm shadow-black/40 hover:shadow-md transform active:scale-95">
+            <i class="ph ph-calendar-plus text-base"></i>
+            <span>Plan Your Event</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-stone-200 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle navigation menu">
+            <i class="ph ph-list text-2xl" id="menuToggleIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE NAVIGATION DROPDOWN -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-[#1e1e20]/95 backdrop-blur-nav px-4 pt-3 pb-6 space-y-2 shadow-2xl animate-fadeIn text-stone-200">
+      <div class="grid grid-cols-2 gap-2 text-sm font-medium">
+        <button onclick="navigateTo('home'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">Home</button>
+        <button onclick="navigateTo('catering'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">Catering</button>
+        <button onclick="navigateTo('bartending'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">Bartending</button>
+        <button onclick="navigateTo('menu'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">Digital Menu</button>
+        <button onclick="navigateTo('shop'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 font-semibold text-red-400">Shop & Order</button>
+        <button onclick="navigateTo('events'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">Events & Gallery</button>
+        <button onclick="navigateTo('about'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">About Jennifer & Team</button>
+        <button onclick="navigateTo('contact'); toggleMobileMenu();" class="text-left py-2.5 px-3 rounded-lg hover:bg-white/10 hover:text-white">Contact</button>
+      </div>
+      <div class="pt-3 border-t border-white/10 flex flex-col gap-2">
+        <button onclick="openEnquiryModal(); toggleMobileMenu();" class="w-full py-3 rounded-xl bg-brand-red text-white text-center font-medium shadow-sm hover:bg-brand-burgundy transition-colors">
+          Plan Your Event
+        </button>
+        <a href="tel:+12037224346" class="w-full py-2.5 rounded-xl border border-white/20 text-stone-200 text-center font-medium flex items-center justify-center gap-2 hover:bg-white/10">
+          <i class="ph ph-phone text-brand-red"></i> Call (203) 722-4346
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN PAGE CONTAINER (Single Page App Multi-view) -->
+  <main id="appContent" class="flex-grow">
+    
+    <!-- ============================================== -->
+    <!-- VIEW 1: HOME PAGE -->
+    <!-- ============================================== -->
+    <section id="view-home" class="page-view">
+      
+      <!-- HERO SECTION -->
+      <div class="relative bg-brand-dark min-h-[85vh] flex items-center overflow-hidden">
+        <!-- Authentic Background Image with Atmospheric Overlay -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/493559783_1219389206854588_3565592002644997234_n.jpg" 
+               alt="SoNo Catering Celebratory Bottle Presentation" 
+               class="w-full h-full object-cover object-center scale-105 transform motion-safe:transition-transform duration-1000 ease-out"
+               onerror="this.src='https://placehold.co/1920x1080/252525/ffffff?text=SoNo+Catering+Celebration'">
+          <!-- Refined gradient scrim: dark burgundy vignette for readability -->
+          <div class="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-brand-burgundy/80 to-brand-dark/60"></div>
+          <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-white">
+          <div class="max-w-2xl">
+            <!-- Location Badge -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase mb-6 text-stone-200">
+              <i class="ph-bold ph-map-pin text-brand-red"></i>
+              Fairfield County, CT · Manhattan, NY
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6 text-balance">
+              Good Food. Great Drinks. <span class="italic font-normal text-stone-200">Unforgettable Gatherings.</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-stone-200 mb-8 font-light leading-relaxed">
+              SoNo Catering brings delicious food, private bartending, and personalized hospitality to your special occasions across Connecticut and beyond.
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-wrap items-center gap-4">
+              <button onclick="openEnquiryModal()" class="px-8 py-4 rounded-full bg-brand-red text-white font-semibold hover:bg-white hover:text-brand-burgundy transition-all duration-300 shadow-lg shadow-red-950/40 flex items-center gap-2 group">
+                <span>Plan Your Event</span>
+                <i class="ph ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </button>
+              <button onclick="navigateTo('menu')" class="px-7 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium border border-white/30 backdrop-blur-sm transition-all duration-300 flex items-center gap-2">
+                <i class="ph ph-book-open"></i>
+                <span>Explore Our Menu</span>
+              </button>
+            </div>
+
+            <!-- Verified Highlights Bar -->
+            <div class="grid grid-cols-3 gap-6 pt-12 mt-12 border-t border-white/15">
+              <div>
+                <p class="font-serif text-2xl font-bold text-white">100%</p>
+                <p class="text-xs text-stone-300 uppercase tracking-wider mt-0.5">Community Recommended</p>
+              </div>
+              <div>
+                <p class="font-serif text-2xl font-bold text-white">Private</p>
+                <p class="text-xs text-stone-300 uppercase tracking-wider mt-0.5">Bartending & Food</p>
+              </div>
+              <div>
+                <p class="font-serif text-2xl font-bold text-white">Hands-on</p>
+                <p class="text-xs text-stone-300 uppercase tracking-wider mt-0.5">Founder-Led Service</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- BRAND PILLARS: 3 CENTRAL OFFERINGS -->
+      <section class="py-20 bg-brand-ivory border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-red">The Three Pillars</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">What We Bring to Your Event</h2>
+            <p class="text-stone-600 mt-3 text-base">From intimate private parties to full celebration buffets, we bring personal care and delicious presentation to every moment.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Pillar 1: Catering -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+              <div class="relative h-64 overflow-hidden">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg" 
+                     alt="SoNo Catering Meatballs & Warm Catering Trays" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     onerror="this.src='https://placehold.co/600x400/781522/ffffff?text=Authentic+Catering'">
+                <div class="absolute top-4 left-4 bg-brand-dark/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  01. CATERING
+                </div>
+              </div>
+              <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold text-brand-dark group-hover:text-brand-red transition-colors">Delicious Food</h3>
+                  <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                    Thoughtful preparation, generous portioning, and professional tray presentations for celebrations, private gatherings, and special occasions.
+                  </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <button onclick="navigateTo('catering')" class="text-brand-red font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Explore Catering <i class="ph ph-arrow-right"></i>
+                  </button>
+                  <span class="text-xs text-stone-400">Trays & Buffets</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pillar 2: Bartending -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+              <div class="relative h-64 overflow-hidden">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/593227376_1410117211115119_1212268323449684681_n.jpg" 
+                     alt="Jennifer Iannacone behind the SoNo indoor bar" 
+                     class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                     onerror="this.src='https://placehold.co/600x400/252525/ffffff?text=Private+Bartending'">
+                <div class="absolute top-4 left-4 bg-brand-red text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  02. BARTENDING
+                </div>
+              </div>
+              <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold text-brand-dark group-hover:text-brand-red transition-colors">Private Bartending</h3>
+                  <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                    Craft beverage service, cocktail station arrangement, and attentive pours that bring an extra touch of hospitality and fun to your guests.
+                  </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <button onclick="navigateTo('bartending')" class="text-brand-red font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Explore Bartending <i class="ph ph-arrow-right"></i>
+                  </button>
+                  <span class="text-xs text-stone-400">Craft & Hospitality</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pillar 3: Event Hospitality -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+              <div class="relative h-64 overflow-hidden">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/612188551_1436032775190229_1726975390519684502_n.jpg" 
+                     alt="The SoNo Catering Team at an event" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     onerror="this.src='https://placehold.co/600x400/781522/ffffff?text=SoNo+Team'">
+                <div class="absolute top-4 left-4 bg-brand-dark/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  03. HOSPITALITY
+                </div>
+              </div>
+              <div class="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+                <div>
+                  <h3 class="font-serif text-2xl font-bold text-brand-dark group-hover:text-brand-red transition-colors">Event Hospitality</h3>
+                  <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                    A real team working seamlessly together. Attentive setup, setup presence, and genuine hospitality so hosts can truly relax and enjoy their guests.
+                  </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <button onclick="navigateTo('about')" class="text-brand-red font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                    Meet Our Team <i class="ph ph-arrow-right"></i>
+                  </button>
+                  <span class="text-xs text-stone-400">Norwalk & Tri-State</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- EDITORIAL BRAND STORY & FOUNDER PREVIEW -->
+      <section class="py-20 lg:py-28 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left: Curated Authentic Photo Composition -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/724103808_1579489034177935_1718372352637886878_n.jpg" 
+                     alt="Jennifer Iannacone with SoNo Catering" 
+                     class="w-full h-[460px] object-cover object-top"
+                     onerror="this.src='https://placehold.co/600x800/A6192E/ffffff?text=Jennifer+Iannacone'">
+              </div>
+              <!-- Floating Card with Brand Quote -->
+              <div class="absolute -bottom-6 -right-6 sm:right-6 bg-brand-dark text-white p-5 rounded-2xl max-w-xs shadow-xl border border-stone-700 hidden sm:block">
+                <p class="font-serif italic text-sm text-stone-200">"We make delicious food and tasty cocktails."</p>
+                <p class="text-[11px] font-bold tracking-wider uppercase text-brand-red mt-2">— Jennifer Iannacone, Owner</p>
+              </div>
+            </div>
+
+            <!-- Right: Story Copy -->
+            <div class="lg:col-span-7">
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Welcome to SoNo Catering</span>
+              <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mt-2 tracking-tight">
+                Making Every Gathering a Little More Special.
+              </h2>
+              <div class="space-y-4 text-stone-600 mt-6 leading-relaxed text-base sm:text-lg">
+                <p>
+                  SoNo Catering is an independent catering and bartending service based in Norwalk, Connecticut. Founded by Jennifer Iannacone, we blend the heart of home-style culinary comfort with the polish of private event hospitality.
+                </p>
+                <p>
+                  Whether you are planning a milestone birthday, an engagement party, bridal shower, corporate gathering, or a family celebration, we handle the culinary preparations and bar service so you can be completely present with your guests.
+                </p>
+              </div>
+
+              <!-- Key Service Checks -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
+                <div class="flex items-center gap-2.5 text-stone-800 text-sm font-medium">
+                  <i class="ph-fill ph-check-circle text-brand-red text-lg"></i>
+                  Catering Trays & Buffet Stations
+                </div>
+                <div class="flex items-center gap-2.5 text-stone-800 text-sm font-medium">
+                  <i class="ph-fill ph-check-circle text-brand-red text-lg"></i>
+                  Professional Private Bartending
+                </div>
+                <div class="flex items-center gap-2.5 text-stone-800 text-sm font-medium">
+                  <i class="ph-fill ph-check-circle text-brand-red text-lg"></i>
+                  Beverage Setup & Bar Arrangements
+                </div>
+                <div class="flex items-center gap-2.5 text-stone-800 text-sm font-medium">
+                  <i class="ph-fill ph-check-circle text-brand-red text-lg"></i>
+                  Attentive Event Support Team
+                </div>
+              </div>
+
+              <div class="mt-10 flex flex-wrap items-center gap-4">
+                <button onclick="navigateTo('about')" class="px-6 py-3 rounded-full bg-brand-dark text-white font-medium hover:bg-brand-red transition-colors text-sm">
+                  Get to Know Us
+                </button>
+                <button onclick="navigateTo('shop')" class="px-6 py-3 rounded-full border border-stone-300 text-stone-800 font-medium hover:border-brand-red hover:text-brand-red transition-colors text-sm flex items-center gap-2">
+                  <span>Browse Catering Trays</span>
+                  <i class="ph ph-shopping-bag"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED DISHES & REAL FOOD SHOWCASE -->
+      <section class="py-20 bg-brand-stone/40 border-y border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Culinary Showcase</span>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark mt-2">Authentic Handcrafted Offerings</h2>
+              <p class="text-stone-600 mt-2 text-sm sm:text-base">Real food from actual SoNo Catering events, prepared fresh for your crowd.</p>
+            </div>
+            <div class="mt-4 md:mt-0 flex gap-3">
+              <button onclick="navigateTo('menu')" class="px-4 py-2 text-sm font-semibold text-brand-red hover:text-brand-burgundy flex items-center gap-1">
+                View Full Digital Menu <i class="ph ph-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Dish 1: Fresh Salad -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm flex flex-col">
+              <div class="h-60 overflow-hidden relative cursor-pointer" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/833139576_1684806223646215_1217276206156518996_n.jpg', 'Fresh Garden Salad Platter')">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/833139576_1684806223646215_1217276206156518996_n.jpg" 
+                     alt="Fresh Salad Platter with cherry tomatoes, cucumber, olives and crisp greens" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-semibold text-stone-700 flex items-center gap-1">
+                  <i class="ph ph-magnifying-glass-plus"></i> View
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <h3 class="font-serif text-xl font-bold text-brand-dark">Fresh Garden Salad</h3>
+                    <span class="text-xs font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">Catering Platter</span>
+                  </div>
+                  <p class="text-stone-600 text-xs sm:text-sm mt-2">
+                    Generous platter of crisp leafy greens, cucumber slices, sweet cherry tomatoes, and kalamata olives prepared fresh for large gatherings.
+                  </p>
+                </div>
+                <div class="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <span class="text-xs text-stone-500">Inquire for pricing & size</span>
+                  <button onclick="addToCartDirect('Fresh Garden Salad', 'Salads & Cold Platters', 'Platter')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                    <i class="ph ph-plus-circle"></i> Add to Request
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dish 2: Pasta Trays -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm flex flex-col">
+              <div class="h-60 overflow-hidden relative cursor-pointer" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/861945846_1707377458055758_52400610059089214_n.jpg', 'Hearty Pasta Trays in Rich Marinara')">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/861945846_1707377458055758_52400610059089214_n.jpg" 
+                     alt="Oven-baked and tossed pasta trays with rich tomato sauce" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-semibold text-stone-700 flex items-center gap-1">
+                  <i class="ph ph-magnifying-glass-plus"></i> View
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <h3 class="font-serif text-xl font-bold text-brand-dark">Pasta in Tomato Sauce</h3>
+                    <span class="text-xs font-semibold text-brand-red bg-red-50 px-2 py-0.5 rounded">Hot Entrée</span>
+                  </div>
+                  <p class="text-stone-600 text-xs sm:text-sm mt-2">
+                    Large catering trays of perfectly cooked pasta smothered in hearty house tomato sauce, ideal for buffets and family-style meals.
+                  </p>
+                </div>
+                <div class="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <span class="text-xs text-stone-500">Half or Full Trays</span>
+                  <button onclick="addToCartDirect('Pasta in Tomato Sauce', 'Pasta & Hot Trays', 'Catering Tray')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                    <i class="ph ph-plus-circle"></i> Add to Request
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dish 3: Meatballs -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm flex flex-col">
+              <div class="h-60 overflow-hidden relative cursor-pointer" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg', 'Savory Meatballs in Rich Simmered Sauce')">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg" 
+                     alt="Trays of traditional savory meatballs in tomato sauce" 
+                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-xs font-semibold text-stone-700 flex items-center gap-1">
+                  <i class="ph ph-magnifying-glass-plus"></i> View
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col justify-between">
+                <div>
+                  <div class="flex justify-between items-start">
+                    <h3 class="font-serif text-xl font-bold text-brand-dark">Savory Meatballs in Sauce</h3>
+                    <span class="text-xs font-semibold text-brand-red bg-red-50 px-2 py-0.5 rounded">Crowd Favorite</span>
+                  </div>
+                  <p class="text-stone-600 text-xs sm:text-sm mt-2">
+                    Tender, seasoned meatballs gently simmered in classic tomato sauce, served piping hot in catered buffet warmer trays.
+                  </p>
+                </div>
+                <div class="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between">
+                  <span class="text-xs text-stone-500">Party Tray Portion</span>
+                  <button onclick="addToCartDirect('Savory Meatballs in Sauce', 'Hot Entrées & Meat', 'Party Tray')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                    <i class="ph ph-plus-circle"></i> Add to Request
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS & COMMUNITY TRUST -->
+      <section class="py-20 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="inline-flex items-center gap-1 text-amber-400 mb-3">
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+              <i class="ph-fill ph-star"></i>
+            </div>
+            <span class="block text-xs font-bold uppercase tracking-widest text-brand-red">Verified Community Feedback</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Kind Words From Our Community</h2>
+            <p class="text-stone-300 mt-2 text-sm">100% recommended on Facebook across Fairfield County and beyond.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-stone-900/90 p-8 rounded-2xl border border-stone-800 flex flex-col justify-between">
+              <p class="text-stone-300 text-sm leading-relaxed italic">
+                "Jennifer and her team did an amazing job with our gathering! The food was delicious, warm, and everyone raved about the cocktail setup. She made hosting completely stress-free."
+              </p>
+              <div class="mt-6 pt-4 border-t border-stone-800 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-xs">FB</div>
+                <div>
+                  <p class="text-sm font-semibold text-white">Private Party Host</p>
+                  <p class="text-xs text-stone-400">Fairfield County, CT</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-stone-900/90 p-8 rounded-2xl border border-stone-800 flex flex-col justify-between">
+              <p class="text-stone-300 text-sm leading-relaxed italic">
+                "From the bar service to the buffet presentation, SoNo Catering brought pure hospitality. The meatballs and pasta trays disappeared fast—everything was freshly prepared and delicious."
+              </p>
+              <div class="mt-6 pt-4 border-t border-stone-800 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-xs">FB</div>
+                <div>
+                  <p class="text-sm font-semibold text-white">Celebration Host</p>
+                  <p class="text-xs text-stone-400">Norwalk, CT</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-stone-900/90 p-8 rounded-2xl border border-stone-800 flex flex-col justify-between">
+              <p class="text-stone-300 text-sm leading-relaxed italic">
+                "Prompt, polite, professional, and friendly. Jennifer's bartending was top-notch and made our guests feel welcomed right when they arrived. 10/10 recommend SoNo Catering!"
+              </p>
+              <div class="mt-6 pt-4 border-t border-stone-800 flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center font-bold text-xs">FB</div>
+                <div>
+                  <p class="text-sm font-semibold text-white">Event Client</p>
+                  <p class="text-xs text-stone-400">Stamford, CT</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 text-center">
+            <a href="https://www.facebook.com/profile.php?id=100063505605727" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-300 hover:text-white transition-colors">
+              <i class="ph-bold ph-facebook-logo text-brand-red text-lg"></i>
+              <span>View Verified Recommendations on our Facebook Page</span>
+              <i class="ph ph-arrow-up-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE AREA CALLOUT -->
+      <section class="py-16 bg-white border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="bg-brand-ivory rounded-3xl p-8 sm:p-12 border border-brand-border flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="max-w-xl">
+              <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Service Coverage</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mt-2">
+                Bringing Great Hospitality Across the Region
+              </h3>
+              <p class="text-stone-600 mt-3 text-sm leading-relaxed">
+                Based out of Norwalk, Connecticut, we proudly travel directly to your home, rented celebration space, or venue across Fairfield County and the New York Metropolitan area.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2 text-xs font-medium text-stone-700">
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Norwalk</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Stamford</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Greenwich</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Rowayton</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">New Canaan</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Darien</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Westport</span>
+                <span class="px-3 py-1.5 bg-white rounded-full border border-stone-200">Southport</span>
+                <span class="px-3 py-1.5 bg-brand-red text-white rounded-full font-semibold">Manhattan, NY</span>
+              </div>
+            </div>
+            <div class="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
+              <button onclick="openEnquiryModal()" class="px-6 py-3.5 rounded-full bg-brand-red text-white font-medium hover:bg-brand-burgundy transition-colors text-sm text-center">
+                Check Date Availability
+              </button>
+              <a href="tel:+12037224346" class="px-6 py-3.5 rounded-full border border-stone-300 text-stone-800 font-medium hover:border-brand-red transition-colors text-sm text-center flex items-center justify-center gap-2">
+                <i class="ph ph-phone text-brand-red"></i> (203) 722-4346
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 2: CATERING SERVICES PAGE -->
+    <!-- ============================================== -->
+    <section id="view-catering" class="page-view hidden">
+      <!-- Header banner -->
+      <div class="bg-brand-dark text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/890020605_1720097330117104_3244493388529207018_n.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Service In Depth</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Food That Brings People Together.</h1>
+          <p class="text-stone-300 max-w-2xl mt-4 text-base sm:text-lg">
+            Discover catering for private celebrations and special gatherings, with delicious food and presentation from SoNo Catering.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Event Occasions Grid -->
+        <div class="mb-20">
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">Occasions We Cater</h2>
+          <p class="text-stone-600 mb-8 max-w-3xl text-sm sm:text-base">
+            Every occasion deserves attentive culinary focus. We provide flexible tray arrangements and full buffet setups designed to match your celebration:
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-cake text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Private Parties</h3>
+              <p class="text-xs text-stone-500 mt-1">Birthdays, milestones & home events</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-heart text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Engagement Parties</h3>
+              <p class="text-xs text-stone-500 mt-1">Celebrations with family & friends</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-sparkle text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Weddings & Rehearsals</h3>
+              <p class="text-xs text-stone-500 mt-1">Intimate rehearsal dinners & receptions</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-flower-lotus text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Bridal & Baby Showers</h3>
+              <p class="text-xs text-stone-500 mt-1">Elegant daytime & afternoon spreads</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-trophy text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Anniversaries</h3>
+              <p class="text-xs text-stone-500 mt-1">Special milestones commemorated in style</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-tree-evergreen text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Holiday Gatherings</h3>
+              <p class="text-xs text-stone-500 mt-1">Festive holiday buffets & dinner parties</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-users text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Family Reunions</h3>
+              <p class="text-xs text-stone-500 mt-1">Abundant trays for multigenerational crowds</p>
+            </div>
+            <div class="p-5 bg-white rounded-xl border border-brand-border shadow-sm">
+              <i class="ph ph-briefcase text-brand-red text-2xl mb-2"></i>
+              <h3 class="font-bold text-sm text-stone-900">Corporate & Office</h3>
+              <p class="text-xs text-stone-500 mt-1">Professional team gatherings & lunches</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Presentation Showcase (Editorial Mosaic) -->
+        <div class="bg-white p-8 sm:p-12 rounded-3xl border border-brand-border mb-16">
+          <div class="max-w-2xl mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Real Event Evidence</span>
+            <h2 class="font-serif text-3xl font-bold text-brand-dark mt-1">Catered Presentations & Trays</h2>
+            <p class="text-stone-600 text-sm mt-2">
+              We focus on warm, comforting classics and crisp seasonal ingredients that keep guests returning for seconds.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-2xl overflow-hidden group">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/833139576_1684806223646215_1217276206156518996_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Fresh Salad Dish">
+              <div class="p-3">
+                <p class="font-bold text-sm text-stone-900">Fresh Garden Salad</p>
+                <p class="text-xs text-stone-500">Crisp greens, cucumbers, tomatoes, and olives</p>
+              </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden group">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/861945846_1707377458055758_52400610059089214_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Pasta Trays">
+              <div class="p-3">
+                <p class="font-bold text-sm text-stone-900">Pasta in Rich Tomato Sauce</p>
+                <p class="text-xs text-stone-500">Catering trays prepared fresh and hot</p>
+              </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden group">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Meatballs in Sauce">
+              <div class="p-3">
+                <p class="font-bold text-sm text-stone-900">Traditional Savory Meatballs</p>
+                <p class="text-xs text-stone-500">Simmered in classic red sauce</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div class="text-center bg-brand-ivory p-12 rounded-3xl border border-brand-border">
+          <h3 class="font-serif text-3xl font-bold text-brand-dark">Let's Talk About Your Catering Needs</h3>
+          <p class="text-stone-600 max-w-xl mx-auto mt-3 text-sm">
+            Tell us about your event date, approximate guest count, and culinary preferences. We will be happy to discuss bespoke tray options and availability.
+          </p>
+          <div class="mt-8 flex justify-center gap-4">
+            <button onclick="openEnquiryModal('Catering')" class="px-8 py-3.5 bg-brand-red text-white rounded-full font-semibold hover:bg-brand-burgundy transition-colors text-sm">
+              Enquire About Catering
+            </button>
+            <button onclick="navigateTo('shop')" class="px-6 py-3.5 border border-stone-300 rounded-full font-semibold text-stone-800 hover:border-brand-red transition-colors text-sm">
+              Browse Order Trays
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 3: BARTENDING SERVICES PAGE -->
+    <!-- ============================================== -->
+    <section id="view-bartending" class="page-view hidden">
+      <!-- Header banner -->
+      <div class="bg-brand-burgundy text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/593227376_1410117211115119_1212268323449684681_n.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs font-bold uppercase tracking-widest text-red-200">Beverage Hospitality</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">A Better Pour for Every Celebration.</h1>
+          <p class="text-stone-200 max-w-2xl mt-4 text-base sm:text-lg">
+            Private bartending and beverage hospitality for gatherings and special occasions across Connecticut and Manhattan.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Hospitality Behind the Bar</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Personalized Private Bartending</h2>
+            <p class="text-stone-600 leading-relaxed text-sm sm:text-base">
+              Bartending is an integral pillar of the SoNo Catering experience. Led by owner Jennifer Iannacone, our beverage service ensures your guests receive swift, warm, and professional pours from arrival until the last toast.
+            </p>
+            <p class="text-stone-600 leading-relaxed text-sm sm:text-base">
+              Whether you are hosting an outdoor summer gathering, an intimate cocktail hour, or an evening anniversary celebration, we bring organized station presentation, clean glassware setup, and friendly service.
+            </p>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-red text-xl mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Private Event Bartending</h4>
+                  <p class="text-xs text-stone-500">Dedicated bartender on site managing the flow of service</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-red text-xl mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Beverage Station Arrangements</h4>
+                  <p class="text-xs text-stone-500">Neat, organized beverage bars, coolers, and display stations</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="ph-fill ph-check-circle text-brand-red text-xl mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-sm text-stone-900">Custom Cocktail & Mocktail Presentation</h4>
+                  <p class="text-xs text-stone-500">Thoughtful presentation for signature celebratory drinks</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button onclick="openEnquiryModal('Bartending')" class="px-8 py-3.5 bg-brand-red text-white rounded-full font-semibold hover:bg-brand-burgundy transition-colors text-sm">
+                Enquire About Bartending
+              </button>
+            </div>
+          </div>
+
+          <!-- Real Bartending Photography Column -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+            <div class="rounded-2xl overflow-hidden shadow-md">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/593227376_1410117211115119_1212268323449684681_n.jpg" 
+                   alt="Jennifer at Indoor Bar Setup" 
+                   class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500">
+              <div class="p-2 text-center text-xs font-medium text-stone-600 bg-white">Indoor Bar Service</div>
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/610981931_1436031961856977_3793377083363696221_n.jpg" 
+                   alt="Jennifer at Outdoor Beverage Station" 
+                   class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500">
+              <div class="p-2 text-center text-xs font-medium text-stone-600 bg-white">Outdoor Station Setup</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note on Beverage Regulations / Hospitality Scope -->
+        <div class="p-6 bg-stone-100 rounded-2xl border border-stone-200 text-xs sm:text-sm text-stone-600 flex items-start gap-3">
+          <i class="ph-fill ph-info text-brand-red text-xl flex-shrink-0 mt-0.5"></i>
+          <div>
+            <p class="font-bold text-stone-900">Hospitality & Beverage Service Details:</p>
+            <p class="mt-0.5">
+              SoNo Catering provides professional bartending, beverage station staging, and pouring services for private parties. Contact Jennifer directly to coordinate custom cocktail requirements, glassware arrangements, and beverage logistics for your specific venue.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 4: DIGITAL MENU PAGE -->
+    <!-- ============================================== -->
+    <section id="view-menu" class="page-view hidden">
+      <div class="bg-brand-ivory border-b border-brand-border py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Culinary Selections</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-brand-dark mt-2">Explore Our Menu</h1>
+          <p class="text-stone-600 max-w-xl mx-auto mt-3 text-sm sm:text-base">
+            Take a look at the food offerings available through SoNo Catering. Handcrafted dishes, catering platters, and hot buffet favorites.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center justify-center gap-2 mb-12 flex-wrap" id="menuFilterTabs">
+          <button onclick="filterMenuCategory('all')" class="menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-brand-red text-white transition-colors" data-category="all">All Dishes</button>
+          <button onclick="filterMenuCategory('salads')" class="menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors" data-category="salads">Salads & Platters</button>
+          <button onclick="filterMenuCategory('pastas')" class="menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors" data-category="pastas">Pasta & Warm Entrées</button>
+          <button onclick="filterMenuCategory('meats')" class="menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors" data-category="meats">Meatballs & Specialties</button>
+          <button onclick="filterMenuCategory('buffet')" class="menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors" data-category="buffet">Buffet Displays</button>
+        </div>
+
+        <!-- Menu Items List Layout (Editorial Style) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="menuItemsGrid">
+          
+          <!-- Item 1 -->
+          <div class="menu-card bg-white p-6 rounded-2xl border border-brand-border shadow-sm flex gap-5 items-center" data-category="salads">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/833139576_1684806223646215_1217276206156518996_n.jpg" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover flex-shrink-0" alt="Fresh Garden Salad">
+            <div class="flex-grow">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-serif text-lg font-bold text-stone-900">Fresh Garden Salad Platter</h3>
+                <span class="text-xs font-semibold text-brand-red">Custom Order</span>
+              </div>
+              <p class="text-stone-500 text-xs sm:text-sm mt-1 leading-relaxed">
+                Crisp garden lettuce, ripe cherry tomatoes, crunchy cucumber slices, and kalamata olives tossed with house dressing.
+              </p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="text-[11px] text-stone-400">Available in Medium & Large Platters</span>
+                <button onclick="addToCartDirect('Fresh Garden Salad Platter', 'Salads & Platters', 'Platter')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                  <i class="ph ph-shopping-bag"></i> Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="menu-card bg-white p-6 rounded-2xl border border-brand-border shadow-sm flex gap-5 items-center" data-category="pastas">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/861945846_1707377458055758_52400610059089214_n.jpg" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover flex-shrink-0" alt="Pasta with Tomato Sauce">
+            <div class="flex-grow">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-serif text-lg font-bold text-stone-900">Pasta in Classic Tomato Sauce</h3>
+                <span class="text-xs font-semibold text-brand-red">Half / Full Tray</span>
+              </div>
+              <p class="text-stone-500 text-xs sm:text-sm mt-1 leading-relaxed">
+                Classic al dente pasta smothered in savory, slow-simmered tomato and herb marinara sauce.
+              </p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="text-[11px] text-stone-400">Half Tray (10-12) / Full Tray (20-25)</span>
+                <button onclick="addToCartDirect('Pasta in Classic Tomato Sauce', 'Pasta & Warm Entrées', 'Catering Tray')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                  <i class="ph ph-shopping-bag"></i> Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="menu-card bg-white p-6 rounded-2xl border border-brand-border shadow-sm flex gap-5 items-center" data-category="meats">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover flex-shrink-0" alt="Savory Meatballs in Sauce">
+            <div class="flex-grow">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-serif text-lg font-bold text-stone-900">Handcrafted Meatballs in Sauce</h3>
+                <span class="text-xs font-semibold text-brand-red">Hot Catering Tray</span>
+              </div>
+              <p class="text-stone-500 text-xs sm:text-sm mt-1 leading-relaxed">
+                Tender, flavorful meatballs seasoned to perfection and served in hearty tomato gravy.
+              </p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="text-[11px] text-stone-400">Served with Chafing Warmers</span>
+                <button onclick="addToCartDirect('Handcrafted Meatballs in Sauce', 'Meatballs & Specialties', 'Party Tray')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                  <i class="ph ph-shopping-bag"></i> Order
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="menu-card bg-white p-6 rounded-2xl border border-brand-border shadow-sm flex gap-5 items-center" data-category="buffet">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/890020605_1720097330117104_3244493388529207018_n.jpg" class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl object-cover flex-shrink-0" alt="Full Buffet Presentation">
+            <div class="flex-grow">
+              <div class="flex justify-between items-baseline">
+                <h3 class="font-serif text-lg font-bold text-stone-900">Complete Event Buffet Spread</h3>
+                <span class="text-xs font-semibold text-brand-red">Custom Package</span>
+              </div>
+              <p class="text-stone-500 text-xs sm:text-sm mt-1 leading-relaxed">
+                Coordinated full-service buffet arrangement combining hot trays, chilled platters, rolls, and display stations.
+              </p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="text-[11px] text-stone-400">Tailored to your party guest count</span>
+                <button onclick="openEnquiryModal('Full Buffet')" class="text-xs font-bold text-brand-red hover:underline flex items-center gap-1">
+                  <i class="ph ph-calendar"></i> Inquire
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-16 text-center bg-stone-100 p-8 rounded-2xl border border-stone-200">
+          <p class="font-serif text-xl font-bold text-stone-900">Looking for a specialized menu or customized dietary selections?</p>
+          <p class="text-stone-600 text-xs sm:text-sm mt-1">We take pride in custom tailoring our dishes for each celebration's preferences.</p>
+          <button onclick="openEnquiryModal('Menu Consultation')" class="mt-4 px-6 py-2.5 bg-brand-dark text-white rounded-full text-xs font-semibold hover:bg-brand-red transition-colors">
+            Ask About Custom Menu Options
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 5: SHOP PAGE (Catering Order Request Storefront) -->
+    <!-- ============================================== -->
+    <section id="view-shop" class="page-view hidden">
+      <div class="bg-brand-ivory border-b border-brand-border py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Online Storefront</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-brand-dark mt-2">Something Delicious Awaits</h1>
+          <p class="text-stone-600 max-w-xl mx-auto mt-3 text-sm sm:text-base">
+            Select authentic food trays and platter quantities for your event. Submit an order request and Jennifer will personally confirm availability and details.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Notice Bar Regarding Order Request Workflow -->
+        <div class="mb-10 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-center gap-3">
+          <i class="ph-bold ph-seal-warning text-lg text-amber-700 flex-shrink-0"></i>
+          <div>
+            <span class="font-bold">Transparent Order Request Process:</span> Submitting a request initiates a booking inquiry directly with SoNo Catering. We will verify your requested date, tray counts, and pickup/delivery logistics prior to final confirmation. No online alcohol sales.
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Product 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="h-56 overflow-hidden">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/833139576_1684806223646215_1217276206156518996_n.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Fresh Garden Salad Platter">
+              </div>
+              <div class="p-6">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-400">Salads & Sides</span>
+                <h3 class="font-serif text-xl font-bold text-stone-900 mt-1">Fresh Garden Salad Platter</h3>
+                <p class="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Leafy greens, crisp cucumber, sweet cherry tomatoes, and kalamata olives.
+                </p>
+                <div class="mt-4 flex items-center justify-between text-xs text-stone-500 font-medium">
+                  <span>Portion: 12-15 Servings</span>
+                  <span class="text-brand-dark font-bold">Inquire / Tray</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <button onclick="addToCartDirect('Fresh Garden Salad Platter', 'Salads & Sides', 'Platter')" class="w-full py-3 bg-brand-red text-white text-xs font-bold rounded-xl hover:bg-brand-burgundy transition-colors flex items-center justify-center gap-2">
+                <i class="ph ph-plus-circle text-base"></i> Add to Order Request
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="h-56 overflow-hidden">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/861945846_1707377458055758_52400610059089214_n.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Pasta Trays in Tomato Sauce">
+              </div>
+              <div class="p-6">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-400">Pasta & Hot Trays</span>
+                <h3 class="font-serif text-xl font-bold text-stone-900 mt-1">Pasta in Marinara Sauce</h3>
+                <p class="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Classic pasta baked in savory tomato herb sauce, prepared in deep aluminum catering pans.
+                </p>
+                <div class="mt-4 flex items-center justify-between text-xs text-stone-500 font-medium">
+                  <span>Portion: Half or Full Pan</span>
+                  <span class="text-brand-dark font-bold">Inquire / Pan</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <button onclick="addToCartDirect('Pasta in Marinara Sauce', 'Pasta & Hot Trays', 'Catering Pan')" class="w-full py-3 bg-brand-red text-white text-xs font-bold rounded-xl hover:bg-brand-burgundy transition-colors flex items-center justify-center gap-2">
+                <i class="ph ph-plus-circle text-base"></i> Add to Order Request
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="h-56 overflow-hidden">
+                <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" alt="Meatballs in Simmered Gravy">
+              </div>
+              <div class="p-6">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-stone-400">Meat & Prepared Dishes</span>
+                <h3 class="font-serif text-xl font-bold text-stone-900 mt-1">Savory Italian Meatballs</h3>
+                <p class="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed">
+                  Homemade-style seasoned meatballs drenched in traditional slow-simmered red sauce.
+                </p>
+                <div class="mt-4 flex items-center justify-between text-xs text-stone-500 font-medium">
+                  <span>Portion: 25-30 Meatballs</span>
+                  <span class="text-brand-dark font-bold">Inquire / Pan</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <button onclick="addToCartDirect('Savory Italian Meatballs', 'Meat & Prepared Dishes', 'Party Pan')" class="w-full py-3 bg-brand-red text-white text-xs font-bold rounded-xl hover:bg-brand-burgundy transition-colors flex items-center justify-center gap-2">
+                <i class="ph ph-plus-circle text-base"></i> Add to Order Request
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 6: EVENTS & AUTHENTIC GALLERY -->
+    <!-- ============================================== -->
+    <section id="view-events" class="page-view hidden">
+      <div class="bg-brand-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Moments Worth Celebrating</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">For the Moments Worth Celebrating</h1>
+          <p class="text-stone-300 max-w-xl mx-auto mt-3 text-sm sm:text-base">
+            From 75-guest celebrations to intimate dinner setups, explore real moments, hospitality setups, and food photography from SoNo Catering.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Gallery Filter Tabs -->
+        <div class="flex items-center justify-center gap-2 mb-10 flex-wrap" id="galleryFilterTabs">
+          <button onclick="filterGallery('all')" class="gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-brand-red text-white" data-cat="all">All Photos</button>
+          <button onclick="filterGallery('food')" class="gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200" data-cat="food">Food & Buffets</button>
+          <button onclick="filterGallery('bartending')" class="gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200" data-cat="bartending">Bartending & Jennifer</button>
+          <button onclick="filterGallery('team')" class="gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200" data-cat="team">Our Team</button>
+          <button onclick="filterGallery('details')" class="gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200" data-cat="details">Event Details & Decor</button>
+        </div>
+
+        <!-- Authentic Mixed-Masonry Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+          
+          <!-- Image: Buffet setup -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="food" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/890020605_1720097330117104_3244493388529207018_n.jpg', 'Full Catered Buffet Presentation')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/890020605_1720097330117104_3244493388529207018_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Full Buffet Presentation">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Food & Catering</span>
+              <p class="font-serif font-bold text-lg">Event Buffet Presentation</p>
+            </div>
+          </div>
+
+          <!-- Image: 4-Person Team -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="team" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/612188551_1436032775190229_1726975390519684502_n.jpg', 'The SoNo Catering Team in Uniform')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/612188551_1436032775190229_1726975390519684502_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="SoNo Catering Team Members">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Team</span>
+              <p class="font-serif font-bold text-lg">The SoNo Catering Team</p>
+            </div>
+          </div>
+
+          <!-- Image: Jennifer behind indoor bar -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="bartending" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/593227376_1410117211115119_1212268323449684681_n.jpg', 'Jennifer behind the Indoor Bar')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/593227376_1410117211115119_1212268323449684681_n.jpg" class="w-full h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Jennifer Behind Indoor Bar">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Bartending</span>
+              <p class="font-serif font-bold text-lg">Jennifer Iannacone</p>
+            </div>
+          </div>
+
+          <!-- Image: Outdoor beverage station -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="bartending" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/610981931_1436031961856977_3793377083363696221_n.jpg', 'Outdoor Beverage Station')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/610981931_1436031961856977_3793377083363696221_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Outdoor Beverage Station">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Beverage Station</span>
+              <p class="font-serif font-bold text-lg">Outdoor Event Pouring</p>
+            </div>
+          </div>
+
+          <!-- Image: Jennifer in Hoodie -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="bartending" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/481112456_1163805142412995_7015489025283546064_n.jpg', 'Jennifer at Beverage Setup')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/481112456_1163805142412995_7015489025283546064_n.jpg" class="w-full h-72 object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Jennifer in SoNo Hoodie">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Owner & Founder</span>
+              <p class="font-serif font-bold text-lg">Jennifer Iannacone</p>
+            </div>
+          </div>
+
+          <!-- Image: Meatballs -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="food" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg', 'Catered Meatballs in Sauce')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/886446709_1719402833519887_2354242651759867940_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Meatballs Tray">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Food</span>
+              <p class="font-serif font-bold text-lg">Meatballs in Warm Sauce</p>
+            </div>
+          </div>
+
+          <!-- Image: Decorated Bottle -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="details" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/493559783_1219389206854588_3565592002644997234_n.jpg', 'Festive Bottle Presentation')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/493559783_1219389206854588_3565592002644997234_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Decorated Beverage Bottle">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Seasonal Accents</span>
+              <p class="font-serif font-bold text-lg">Decorated Bottle Detail</p>
+            </div>
+          </div>
+
+          <!-- Image: Festive Centerpiece -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="details" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/608889047_1436031788523661_8297399625843344201_n.jpg', 'Festive Centerpiece')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/608889047_1436031788523661_8297399625843344201_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Festive Table Centerpiece">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Event Decor</span>
+              <p class="font-serif font-bold text-lg">Celebratory Centerpiece</p>
+            </div>
+          </div>
+
+          <!-- Image: Christmas Ornament Display -->
+          <div class="gal-item group relative rounded-2xl overflow-hidden cursor-pointer shadow-sm" data-cat="details" onclick="openLightbox('https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/611324509_1436031848523655_2897295987045996284_n.jpg', 'Holiday Seasonal Details')">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/611324509_1436031848523655_2897295987045996284_n.jpg" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" alt="Holiday Ornament Details">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-6 flex flex-col justify-end text-white">
+              <span class="text-xs uppercase tracking-wider text-stone-300">Seasonal</span>
+              <p class="font-serif font-bold text-lg">Holiday Party Accents</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 7: ABOUT JENNIFER & OUR TEAM -->
+    <!-- ============================================== -->
+    <section id="view-about" class="page-view hidden">
+      <div class="bg-brand-ivory border-b border-brand-border py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">The People Behind SoNo</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold text-brand-dark mt-2">Hospitality With a Personal Touch</h1>
+          <p class="text-stone-600 max-w-xl mx-auto mt-3 text-sm sm:text-base">
+            Meet Jennifer Iannacone and the dedicated team that brings genuine care, delicious food, and great drinks to your celebrations.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- Founder Profile Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/724103808_1579489034177935_1718372352637886878_n.jpg" 
+                   alt="Jennifer Iannacone, Owner and Bartender of SoNo Catering" 
+                   class="w-full h-[450px] object-cover object-top">
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-red">The Person Behind SoNo Catering</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-dark">Jennifer Iannacone</h2>
+            <p class="text-xs font-semibold uppercase tracking-wider text-stone-500">Owner & Lead Bartender</p>
+            <div class="text-stone-600 space-y-4 text-sm sm:text-base leading-relaxed">
+              <p>
+                SoNo Catering brings together delicious food, private bartending, and personal hospitality for special occasions. Led by Jennifer Iannacone, the business combines a hands-on approach with a dedicated team to help make events memorable.
+              </p>
+              <p>
+                Whether coordinating the culinary buffet trays or pouring specialty drinks behind the bar, Jennifer is directly involved to ensure every host and guest feels welcome and taken care of throughout their celebration.
+              </p>
+            </div>
+            <div class="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-stone-700">
+              <div class="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
+                <i class="ph-bold ph-phone text-brand-red"></i> (203) 722-4346
+              </div>
+              <div class="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
+                <i class="ph-bold ph-envelope text-brand-red"></i> jiannacone77@aol.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dedicated Team Section -->
+        <div class="bg-white rounded-3xl p-8 sm:p-14 border border-brand-border">
+          <div class="max-w-3xl mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Our Service Crew</span>
+            <h2 class="font-serif text-3xl font-bold text-brand-dark mt-2">The People Behind the Experience</h2>
+            <p class="text-stone-600 mt-3 text-sm sm:text-base leading-relaxed">
+              Great hospitality comes from the people behind it. Our team works together to bring food, drinks, and attentive service to special occasions across Fairfield County and beyond.
+            </p>
+          </div>
+
+          <!-- Authentic 4-Person Team Photo in Branded Shirts -->
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-stone-200">
+            <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/612188551_1436032775190229_1726975390519684502_n.jpg" 
+                 alt="The Four-Person SoNo Catering Team wearing branded shirts behind the catered food presentation" 
+                 class="w-full h-[400px] sm:h-[480px] object-cover">
+            <div class="bg-stone-50 p-4 text-center text-xs text-stone-500 border-t border-stone-200 font-medium">
+              Authentic SoNo Catering team members in branded uniform serving guests at an event setup.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- VIEW 8: CONTACT & EVENT ENQUIRY -->
+    <!-- ============================================== -->
+    <section id="view-contact" class="page-view hidden">
+      <div class="bg-brand-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Get in Touch</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Let's Make Your Next Event Special</h1>
+          <p class="text-stone-300 max-w-xl mx-auto mt-3 text-sm sm:text-base">
+            Tell us about your celebration, and get in touch with Jennifer and the SoNo Catering team to discuss food, drinks, and dates.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Info Column -->
+          <div class="lg:col-span-5 space-y-8">
+            <div>
+              <h2 class="font-serif text-2xl font-bold text-brand-dark">Direct Information</h2>
+              <p class="text-stone-600 text-sm mt-1">Reach out by phone, email, or send your event specs via our form.</p>
+            </div>
+
+            <div class="space-y-4">
+              <a href="tel:+12037224346" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-brand-border shadow-sm hover:border-brand-red transition-colors group">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <i class="ph ph-phone"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-stone-500 uppercase font-bold tracking-wider">Call or Text</p>
+                  <p class="font-bold text-base text-stone-900">+1 (203) 722-4346</p>
+                </div>
+              </a>
+
+              <a href="mailto:jiannacone77@aol.com" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-brand-border shadow-sm hover:border-brand-red transition-colors group">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl group-hover:bg-brand-red group-hover:text-white transition-colors">
+                  <i class="ph ph-envelope"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-stone-500 uppercase font-bold tracking-wider">Email Jennifer Directly</p>
+                  <p class="font-bold text-base text-stone-900">jiannacone77@aol.com</p>
+                </div>
+              </a>
+
+              <div class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-brand-border shadow-sm">
+                <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center text-xl">
+                  <i class="ph ph-map-pin"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-stone-500 uppercase font-bold tracking-wider">Headquarters Base</p>
+                  <p class="font-bold text-base text-stone-900">Norwalk, Connecticut</p>
+                  <p class="text-xs text-stone-500">Serving Fairfield County, CT & Manhattan, NY</p>
+                </div>
+              </div>
+
+              <a href="https://www.facebook.com/profile.php?id=100063505605727" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-brand-border shadow-sm hover:border-brand-red transition-colors group">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <i class="ph-bold ph-facebook-logo"></i>
+                </div>
+                <div>
+                  <p class="text-xs text-stone-500 uppercase font-bold tracking-wider">Facebook Community</p>
+                  <p class="font-bold text-base text-stone-900">Follow SoNo Catering</p>
+                </div>
+              </a>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="pt-4">
+              <h3 class="font-serif text-lg font-bold text-brand-dark mb-3">Frequently Asked Questions</h3>
+              <div class="space-y-2" id="faqAccordion">
+                
+                <div class="border border-stone-200 rounded-xl overflow-hidden bg-white">
+                  <button onclick="toggleFaq('faq1')" class="w-full text-left p-3.5 text-xs font-bold text-stone-800 flex justify-between items-center">
+                    <span>What areas do you provide catering and bartending for?</span>
+                    <i class="ph ph-caret-down text-brand-red" id="faq1-icon"></i>
+                  </button>
+                  <div id="faq1" class="hidden p-3.5 pt-0 text-xs text-stone-600 border-t border-stone-100">
+                    We are based in Norwalk, CT, and provide on-site services throughout Fairfield County (Stamford, Greenwich, New Canaan, Darien, Westport, Southport, Rowayton) as well as Manhattan, New York.
+                  </div>
+                </div>
+
+                <div class="border border-stone-200 rounded-xl overflow-hidden bg-white">
+                  <button onclick="toggleFaq('faq2')" class="w-full text-left p-3.5 text-xs font-bold text-stone-800 flex justify-between items-center">
+                    <span>Can I book both catering and bartending together?</span>
+                    <i class="ph ph-caret-down text-brand-red" id="faq2-icon"></i>
+                  </button>
+                  <div id="faq2" class="hidden p-3.5 pt-0 text-xs text-stone-600 border-t border-stone-100">
+                    Yes! Offering coordinated food preparation and private bartending together is one of our greatest strengths, ensuring unified service for your gathering.
+                  </div>
+                </div>
+
+                <div class="border border-stone-200 rounded-xl overflow-hidden bg-white">
+                  <button onclick="toggleFaq('faq3')" class="w-full text-left p-3.5 text-xs font-bold text-stone-800 flex justify-between items-center">
+                    <span>How does an order request or booking get confirmed?</span>
+                    <i class="ph ph-caret-down text-brand-red" id="faq3-icon"></i>
+                  </button>
+                  <div id="faq3" class="hidden p-3.5 pt-0 text-xs text-stone-600 border-t border-stone-100">
+                    Submitting your request sends your event specifics directly to Jennifer. We will connect with you by phone or email to confirm date availability, dish quantities, and logistics before any commitment.
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Main Booking / Enquiry Form Column -->
+          <div class="lg:col-span-7">
+            <div class="bg-white p-8 sm:p-10 rounded-3xl border border-brand-border shadow-lg">
+              <h2 class="font-serif text-2xl font-bold text-brand-dark mb-1">Event Enquiry Form</h2>
+              <p class="text-stone-500 text-xs sm:text-sm mb-6">Complete the details below to check availability for your upcoming celebration.</p>
+
+              <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Full Name *</label>
+                    <input type="text" id="formName" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none" placeholder="Your name">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Email Address *</label>
+                    <input type="email" id="formEmail" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none" placeholder="you@email.com">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Phone Number *</label>
+                    <input type="tel" id="formPhone" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none" placeholder="(203) 000-0000">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Event Type *</label>
+                    <select id="formEventType" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none bg-white">
+                      <option value="">Select an occasion...</option>
+                      <option value="Private Gathering / Birthday">Private Gathering / Birthday</option>
+                      <option value="Engagement Party">Engagement Party</option>
+                      <option value="Wedding / Rehearsal Dinner">Wedding / Rehearsal Dinner</option>
+                      <option value="Bridal / Baby Shower">Bridal / Baby Shower</option>
+                      <option value="Anniversary Celebration">Anniversary Celebration</option>
+                      <option value="Holiday Celebration">Holiday Celebration</option>
+                      <option value="Other Special Occasion">Other Special Occasion</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Event Date *</label>
+                    <input type="date" id="formDate" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Event Location / Town *</label>
+                    <input type="text" id="formLocation" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none" placeholder="e.g. Norwalk, CT">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Estimated Guests *</label>
+                    <input type="number" id="formGuests" min="5" max="500" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none" placeholder="e.g. 50">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Service Requirements *</label>
+                  <select id="formServiceRequirement" required class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none bg-white">
+                    <option value="Catering & Bartending (Both)">Catering & Bartending (Both)</option>
+                    <option value="Catering Food Only">Catering Food Only</option>
+                    <option value="Private Bartending Only">Private Bartending Only</option>
+                    <option value="Not Sure Yet / Custom Consultation">Not Sure Yet / Custom Consultation</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-1">Additional Event Notes & Requirements</label>
+                  <textarea id="formNotes" rows="4" class="w-full px-4 py-2.5 rounded-xl border border-stone-300 focus:border-brand-red focus:ring-1 focus:ring-brand-red text-sm outline-none" placeholder="Tell us about your timing, food preferences, drink preferences, or questions..."></textarea>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" class="w-full py-4 rounded-full bg-brand-red text-white font-semibold hover:bg-brand-burgundy transition-all text-sm shadow-md">
+                    Send Event Enquiry
+                  </button>
+                  <p class="text-[11px] text-stone-400 text-center mt-3">
+                    Submitting an inquiry does not obligate or confirm a booking. We will connect directly to verify details.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- FINAL CALL TO ACTION (Visible on all views) -->
+  <!-- ============================================== -->
+  <section class="py-20 bg-brand-burgundy text-white relative overflow-hidden">
+    <!-- Subtle graphic accent -->
+    <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-brand-red/30 blur-3xl pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <span class="text-xs font-bold uppercase tracking-widest text-red-200">Start Planning Today</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-3 text-balance">Let's Make It an Occasion to Remember.</h2>
+      <p class="text-stone-200 mt-4 max-w-2xl mx-auto text-base sm:text-lg">
+        Planning a celebration? Let's talk about bringing great food, drinks, and attentive hospitality to your event.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <button onclick="openEnquiryModal()" class="px-8 py-4 rounded-full bg-white text-brand-burgundy font-bold hover:bg-stone-100 transition-colors shadow-lg text-sm">
+          Plan Your Event
+        </button>
+        <a href="tel:+12037224346" class="px-8 py-4 rounded-full border border-white/40 text-white font-bold hover:bg-white/10 transition-colors text-sm flex items-center gap-2">
+          <i class="ph ph-phone"></i> Call (203) 722-4346
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== -->
+  <!-- COMPREHENSIVE FOOTER -->
+  <!-- ============================================== -->
+  <footer class="bg-brand-dark text-stone-300 pt-16 pb-12 border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-stone-800">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden bg-brand-red flex items-center justify-center shadow-md ring-2 ring-brand-red/40 flex-shrink-0">
+              <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/HV/refs/heads/main/793fe12a-3f64-461c-bb99-c0273209f739.jpg" 
+                   alt="SoNo Catering Logo" 
+                   class="w-full h-full object-cover object-center scale-[1.08]"
+                   onerror="this.parentElement.innerHTML='<i class=\'ph ph-cooking-pot text-lg text-white\'></i>'">
+            </div>
+            <span class="font-serif text-2xl font-bold text-white tracking-tight">
+              SoNo<span class="text-brand-red font-light italic ml-1">Catering</span>
+            </span>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+            Good Food. Great Drinks. Unforgettable Gatherings. Delivering food, private bartending, and personal hospitality across Fairfield County, CT and Manhattan, NY.
+          </p>
+          <div class="pt-2">
+            <a href="https://www.facebook.com/profile.php?id=100063505605727" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-stone-300 hover:text-white bg-stone-900 px-3.5 py-2 rounded-lg border border-stone-800 transition-colors">
+              <i class="ph-bold ph-facebook-logo text-brand-red text-base"></i>
+              <span>Facebook Community Page</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navigation</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li><button onclick="navigateTo('home')" class="hover:text-white transition-colors">Home Overview</button></li>
+            <li><button onclick="navigateTo('catering')" class="hover:text-white transition-colors">Catering Services</button></li>
+            <li><button onclick="navigateTo('bartending')" class="hover:text-white transition-colors">Private Bartending</button></li>
+            <li><button onclick="navigateTo('menu')" class="hover:text-white transition-colors">Digital Menu</button></li>
+            <li><button onclick="navigateTo('shop')" class="hover:text-white transition-colors">Shop Trays & Platters</button></li>
+            <li><button onclick="navigateTo('events')" class="hover:text-white transition-colors">Events & Gallery</button></li>
+            <li><button onclick="navigateTo('about')" class="hover:text-white transition-colors">About Jennifer & Team</button></li>
+            <li><button onclick="navigateTo('contact')" class="hover:text-white transition-colors">Contact & Enquiries</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Pillars -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Services</h4>
+          <ul class="space-y-2 text-xs text-stone-400">
+            <li><span>Catering Food Trays</span></li>
+            <li><span>Private Bartending</span></li>
+            <li><span>Beverage Stations</span></li>
+            <li><span>Buffet Presentations</span></li>
+            <li><span>Celebrations & Parties</span></li>
+            <li><span>Rehearsal Dinners</span></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Verified Contact -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-white">Contact & Base</h4>
+          <p class="text-xs text-stone-400">
+            <strong class="text-white block font-medium">Jennifer Iannacone</strong>
+            Owner & Bartender
+          </p>
+          <div class="space-y-2 text-xs text-stone-400">
+            <p class="flex items-center gap-2">
+              <i class="ph ph-phone text-brand-red"></i>
+              <a href="tel:+12037224346" class="hover:text-white transition-colors">+1 203-722-4346</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="ph ph-envelope text-brand-red"></i>
+              <a href="mailto:jiannacone77@aol.com" class="hover:text-white transition-colors">jiannacone77@aol.com</a>
+            </p>
+            <p class="flex items-center gap-2">
+              <i class="ph ph-map-pin text-brand-red"></i>
+              <span>Norwalk, Connecticut</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Note -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; <span id="currentYear"></span> SoNo Catering & Bartending Services LLC. All rights reserved.</p>
+        <p class="text-stone-500 text-[11px]">Fairfield County, CT · Norwalk · Stamford · Greenwich · Darien · Westport · New Canaan · Manhattan, NY</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- SHOPPING CART / ORDER REQUEST DRAWER -->
+  <!-- ============================================== -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
+    
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+        
+        <!-- Cart Header -->
+        <div class="p-6 bg-brand-dark text-white flex items-center justify-between border-b border-stone-800">
+          <div class="flex items-center gap-2">
+            <i class="ph ph-shopping-bag text-xl text-brand-red"></i>
+            <h3 class="font-serif text-lg font-bold">Your Catering Order Request</h3>
+          </div>
+          <button onclick="toggleCartDrawer()" class="p-1 rounded-full text-stone-400 hover:text-white hover:bg-stone-800">
+            <i class="ph ph-x text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Cart Items List (Dynamic) -->
+        <div id="cartItemsList" class="flex-grow overflow-y-auto p-6 space-y-4">
+          <!-- Populated by JS -->
+          <div id="cartEmptyState" class="text-center py-12 text-stone-400">
+            <i class="ph ph-tray text-4xl mb-3 text-stone-300"></i>
+            <p class="font-medium text-sm text-stone-600">Your order request is currently empty.</p>
+            <p class="text-xs text-stone-400 mt-1">Explore our Shop or Menu to add food trays and platters.</p>
+            <button onclick="toggleCartDrawer(); navigateTo('shop');" class="mt-4 px-5 py-2 rounded-full bg-brand-red text-white text-xs font-semibold hover:bg-brand-burgundy transition-colors">
+              Browse Food Trays
+            </button>
+          </div>
+        </div>
+
+        <!-- Cart Footer / Submit Order Request Form -->
+        <div id="cartFooterSection" class="p-6 bg-brand-ivory border-t border-brand-border hidden space-y-4">
+          <div class="text-xs text-stone-600 bg-white p-3 rounded-xl border border-stone-200">
+            <p class="font-bold text-stone-900">Direct Order Request Mode:</p>
+            <p class="mt-0.5">Jennifer will contact you directly to confirm dish availability, quantities, and schedule. No payment is charged now.</p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Your Name *</label>
+            <input type="text" id="cartCustomerName" placeholder="Full name" class="w-full px-3 py-2 text-xs border rounded-lg outline-none focus:border-brand-red">
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Phone *</label>
+              <input type="tel" id="cartCustomerPhone" placeholder="(203) 000-0000" class="w-full px-3 py-2 text-xs border rounded-lg outline-none focus:border-brand-red">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-stone-700 mb-1">Event Date *</label>
+              <input type="date" id="cartCustomerDate" class="w-full px-3 py-2 text-xs border rounded-lg outline-none focus:border-brand-red">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Event Town / Delivery Location *</label>
+            <input type="text" id="cartCustomerLocation" placeholder="e.g. Norwalk, Westport" class="w-full px-3 py-2 text-xs border rounded-lg outline-none focus:border-brand-red">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-stone-700 mb-1">Special Notes / Dietary / Timing</label>
+            <textarea id="cartCustomerNotes" rows="2" placeholder="Optional notes for Jennifer..." class="w-full px-3 py-2 text-xs border rounded-lg outline-none focus:border-brand-red"></textarea>
+          </div>
+
+          <button onclick="submitOrderRequest()" class="w-full py-3.5 rounded-full bg-brand-red text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-burgundy transition-all shadow-md">
+            Submit Order Request
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- EVENT ENQUIRY MODAL -->
+  <!-- ============================================== -->
+  <div id="enquiryModal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="closeEnquiryModal()"></div>
+      
+      <div class="relative bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl z-10 border border-brand-border">
+        <button onclick="closeEnquiryModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-700">
+          <i class="ph ph-x text-2xl"></i>
+        </button>
+
+        <div class="mb-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-red">Quick Enquiry</span>
+          <h3 class="font-serif text-2xl font-bold text-brand-dark mt-1">Plan Your Event with SoNo</h3>
+          <p class="text-xs text-stone-500 mt-1">Direct inquiry sent straight to Jennifer Iannacone.</p>
+        </div>
+
+        <form onsubmit="handleModalEnquirySubmit(event)" class="space-y-3.5 text-xs">
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Full Name *</label>
+            <input type="text" id="modalName" required class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red" placeholder="Your full name">
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Phone Number *</label>
+              <input type="tel" id="modalPhone" required class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red" placeholder="(203) 722-4346">
+            </div>
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Email Address *</label>
+              <input type="email" id="modalEmail" required class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red" placeholder="you@email.com">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Event Date *</label>
+              <input type="date" id="modalDate" required class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red">
+            </div>
+            <div>
+              <label class="block font-bold text-stone-700 mb-1">Estimated Guests *</label>
+              <input type="number" id="modalGuests" min="5" max="500" required class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red" placeholder="e.g. 50">
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Service Needed *</label>
+            <select id="modalService" required class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red bg-white">
+              <option value="Both Catering & Bartending">Both Catering & Bartending</option>
+              <option value="Catering Only">Catering Food Only</option>
+              <option value="Bartending Only">Private Bartending Only</option>
+              <option value="Event Consultation">Custom Event Consultation</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-bold text-stone-700 mb-1">Event Location / Town & Notes</label>
+            <textarea id="modalNotes" rows="3" class="w-full px-3.5 py-2 rounded-xl border border-stone-300 outline-none focus:border-brand-red" placeholder="e.g. Norwalk backyard party, cocktail requests, dinner setup..."></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3 rounded-full bg-brand-red text-white font-bold text-xs hover:bg-brand-burgundy transition-colors shadow-md">
+              Send Event Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- LIGHTBOX MODAL FOR AUTHENTIC PHOTOS -->
+  <!-- ============================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 overflow-hidden hidden bg-black/95 flex items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-brand-red text-3xl focus:outline-none z-10">
+      <i class="ph ph-x"></i>
+    </button>
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="SoNo Catering Image preview" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl">
+      <p id="lightboxCaption" class="text-stone-300 text-sm mt-4 text-center font-medium font-serif"></p>
+    </div>
+  </div>
+
+  <!-- GENERIC MESSAGE TOAST (replaces alert/confirm) -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-32 transition-transform duration-300 ease-out max-w-sm bg-brand-dark text-white p-4 rounded-2xl shadow-2xl border border-stone-700 flex items-start gap-3">
+    <i class="ph-fill ph-check-circle text-brand-red text-2xl flex-shrink-0 mt-0.5" id="toastIcon"></i>
+    <div>
+      <h4 class="font-bold text-xs uppercase tracking-wider text-stone-200" id="toastTitle">Notification</h4>
+      <p class="text-xs text-stone-300 mt-0.5" id="toastMessage">Action completed successfully.</p>
+    </div>
+  </div>
+
+  <!-- RECURRING 15-SECOND FLOATING CTA PROMPT -->
+  <aside id="recurringCtaBar" aria-label="Quick booking call to action" class="fixed bottom-6 left-6 z-50 transform -translate-x-[120%] opacity-0 pointer-events-none transition-all duration-700 ease-out max-w-sm sm:max-w-md w-[calc(100vw-3rem)]">
+    <div class="relative bg-[#1e1e20]/95 backdrop-blur-xl text-white p-4 sm:p-5 rounded-2xl shadow-2xl border border-white/15 ring-1 ring-black/40 overflow-hidden flex items-center gap-3.5 sm:gap-4 group">
+      <!-- Ambient Brand Glow Accent -->
+      <div class="absolute -right-8 -top-8 w-28 h-28 bg-brand-red/25 rounded-full blur-2xl pointer-events-none"></div>
+
+      <!-- Close / Dismiss Button -->
+      <button onclick="dismissRecurringCta()" class="absolute top-2.5 right-2.5 text-stone-400 hover:text-white p-1 rounded-full hover:bg-white/10 transition-colors focus:outline-none" aria-label="Dismiss message">
+        <i class="ph ph-x text-sm"></i>
+      </button>
+
+      <!-- Hospitality Icon Badge -->
+      <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-brand-red to-brand-burgundy text-white flex items-center justify-center flex-shrink-0 shadow-md ring-1 ring-white/20">
+        <i class="ph-bold ph-calendar-star text-xl sm:text-2xl text-red-100"></i>
+      </div>
+
+      <!-- Copy & Actions -->
+      <div class="flex-grow pr-4">
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-red-300">Dates Open for 2026/2027</span>
+        </div>
+        <p class="font-serif text-sm sm:text-base font-bold text-white leading-snug mt-0.5">Planning an Event or Gathering?</p>
+        <p class="text-[11px] sm:text-xs text-stone-300 line-clamp-1 mt-0.5">Catering trays, private bartending & hospitality.</p>
+        
+        <!-- Button Row -->
+        <div class="mt-3 flex items-center gap-2">
+          <button onclick="handleRecurringCtaClick()" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-brand-red hover:bg-brand-burgundy text-white text-xs font-semibold shadow-sm shadow-red-950/50 hover:shadow transition-all transform active:scale-95">
+            <span>Plan Your Event</span>
+            <i class="ph-bold ph-arrow-right text-[11px]"></i>
+          </button>
+          <a href="tel:+12037224346" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-stone-200 hover:text-white text-xs font-medium border border-white/15 transition-colors">
+            <i class="ph ph-phone text-brand-red"></i>
+            <span>(203) 722-4346</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================== -->
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <!-- ============================================== -->
+  <script>
+    // --- Application State ---
+    const state = {
+      currentPage: 'home',
+      cart: JSON.parse(localStorage.getItem('sono_cart') || '[]'),
+      isCartOpen: false,
+      isMobileMenuOpen: false
+    };
+
+    // --- Onload Initialization ---
+    window.onload = function() {
+      // Set Copyright Year
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Check URL hash for routing
+      const hash = window.location.hash.replace('#', '');
+      if (['home', 'catering', 'bartending', 'menu', 'shop', 'events', 'about', 'contact'].includes(hash)) {
+        navigateTo(hash);
+      } else {
+        navigateTo('home');
+      }
+
+      updateCartBadge();
+      renderCartItems();
+      initRecurringCta();
+    };
+
+    // --- Recurring 15-Second Professional CTA ---
+    let ctaInterval = null;
+    let ctaHideTimeout = null;
+
+    function initRecurringCta() {
+      // Clear any prior interval
+      if (ctaInterval) clearInterval(ctaInterval);
+
+      // Trigger every 15 seconds (15000ms)
+      ctaInterval = setInterval(() => {
+        showRecurringCta();
+      }, 15000);
+    }
+
+    function showRecurringCta() {
+      const cta = document.getElementById('recurringCtaBar');
+      const enquiryModal = document.getElementById('enquiryModal');
+      
+      // Do not interrupt the user if the booking enquiry modal or cart drawer is currently opened
+      if (state.isCartOpen || (enquiryModal && !enquiryModal.classList.contains('hidden'))) {
+        return;
+      }
+
+      if (cta) {
+        cta.classList.remove('-translate-x-[120%]', 'opacity-0', 'pointer-events-none');
+        cta.classList.add('translate-x-0', 'opacity-100', 'pointer-events-auto');
+
+        // Automatically hide smoothly after 7 seconds so it is never obtrusive
+        clearTimeout(ctaHideTimeout);
+        ctaHideTimeout = setTimeout(() => {
+          dismissRecurringCta();
+        }, 7000);
+      }
+    }
+
+    function dismissRecurringCta() {
+      const cta = document.getElementById('recurringCtaBar');
+      if (cta) {
+        cta.classList.remove('translate-x-0', 'opacity-100', 'pointer-events-auto');
+        cta.classList.add('-translate-x-[120%]', 'opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function handleRecurringCtaClick() {
+      dismissRecurringCta();
+      openEnquiryModal();
+    }
+
+    // --- Routing / Page View Controller ---
+    function navigateTo(pageId) {
+      state.currentPage = pageId;
+      window.location.hash = pageId;
+
+      // Hide all page views
+      const views = document.querySelectorAll('.page-view');
+      views.forEach(v => v.classList.add('hidden'));
+
+      // Show selected page view
+      const activeView = document.getElementById(`view-${pageId}`);
+      if (activeView) {
+        activeView.classList.remove('hidden');
+      }
+
+      // Update Nav links active state
+      const navButtons = document.querySelectorAll('.nav-item');
+      navButtons.forEach(btn => {
+        if (btn.getAttribute('data-page') === pageId) {
+          btn.classList.add('text-white', 'font-bold', 'bg-white/15', 'shadow-inner');
+          btn.classList.remove('text-stone-200');
+        } else {
+          btn.classList.remove('text-white', 'font-bold', 'bg-white/15', 'shadow-inner');
+          btn.classList.add('text-stone-200');
+        }
+      });
+
+      // Scroll to top smoothly
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // --- Mobile Menu Toggle ---
+    function toggleMobileMenu() {
+      state.isMobileMenuOpen = !state.isMobileMenuOpen;
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuToggleIcon');
+      if (state.isMobileMenuOpen) {
+        menu.classList.remove('hidden');
+        icon.className = "ph ph-x text-2xl";
+      } else {
+        menu.classList.add('hidden');
+        icon.className = "ph ph-list text-2xl";
+      }
+    }
+
+    // --- Cart & Order Request System ---
+    function toggleCartDrawer() {
+      state.isCartOpen = !state.isCartOpen;
+      const drawer = document.getElementById('cartDrawer');
+      if (state.isCartOpen) {
+        drawer.classList.remove('hidden');
+        renderCartItems();
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    function addToCartDirect(title, category, portionType) {
+      const existing = state.cart.find(item => item.title === title);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        state.cart.push({
+          id: Date.now(),
+          title: title,
+          category: category,
+          portion: portionType,
+          quantity: 1
+        });
+      }
+      saveCart();
+      showToast('Added to Order Request', `"${title}" was added to your catering request.`);
+      
+      // Auto open cart drawer to provide immediate feedback
+      if (!state.isCartOpen) {
+        toggleCartDrawer();
+      }
+    }
+
+    function updateCartItemQuantity(index, delta) {
+      if (!state.cart[index]) return;
+      state.cart[index].quantity += delta;
+      if (state.cart[index].quantity <= 0) {
+        state.cart.splice(index, 1);
+      }
+      saveCart();
+      renderCartItems();
+    }
+
+    function removeCartItem(index) {
+      if (state.cart[index]) {
+        state.cart.splice(index, 1);
+        saveCart();
+        renderCartItems();
+      }
+    }
+
+    function saveCart() {
+      localStorage.setItem('sono_cart', JSON.stringify(state.cart));
+      updateCartBadge();
+    }
+
+    function updateCartBadge() {
+      const totalCount = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+      const badge = document.getElementById('cartCountBadge');
+      if (badge) {
+        badge.textContent = totalCount;
+        badge.style.display = totalCount > 0 ? 'flex' : 'none';
+      }
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById('cartItemsList');
+      const footer = document.getElementById('cartFooterSection');
+      if (!container) return;
+
+      if (state.cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-stone-400">
+            <i class="ph ph-tray text-4xl mb-3 text-stone-300"></i>
+            <p class="font-medium text-sm text-stone-600">Your order request is currently empty.</p>
+            <p class="text-xs text-stone-400 mt-1">Explore our Shop or Menu to add food trays and platters.</p>
+            <button onclick="toggleCartDrawer(); navigateTo('shop');" class="mt-4 px-5 py-2 rounded-full bg-brand-red text-white text-xs font-semibold hover:bg-brand-burgundy transition-colors">
+              Browse Food Trays
+            </button>
+          </div>
+        `;
+        if (footer) footer.classList.add('hidden');
+        return;
+      }
+
+      if (footer) footer.classList.remove('hidden');
+
+      let html = '';
+      state.cart.forEach((item, idx) => {
+        html += `
+          <div class="p-3.5 bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-between gap-3">
+            <div class="flex-grow">
+              <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider">${item.category}</span>
+              <h4 class="font-bold text-xs text-stone-900">${item.title}</h4>
+              <span class="text-[11px] text-stone-500">${item.portion}</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="updateCartItemQuantity(${idx}, -1)" class="w-6 h-6 rounded-md bg-white border border-stone-300 text-stone-700 flex items-center justify-center text-xs hover:bg-stone-100 font-bold">-</button>
+              <span class="text-xs font-bold w-4 text-center">${item.quantity}</span>
+              <button onclick="updateCartItemQuantity(${idx}, 1)" class="w-6 h-6 rounded-md bg-white border border-stone-300 text-stone-700 flex items-center justify-center text-xs hover:bg-stone-100 font-bold">+</button>
+              <button onclick="removeCartItem(${idx})" class="text-stone-400 hover:text-brand-red p-1 ml-1" title="Remove">
+                <i class="ph ph-trash text-sm"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function submitOrderRequest() {
+      const name = document.getElementById('cartCustomerName').value.trim();
+      const phone = document.getElementById('cartCustomerPhone').value.trim();
+      const date = document.getElementById('cartCustomerDate').value;
+      const location = document.getElementById('cartCustomerLocation').value.trim();
+      const notes = document.getElementById('cartCustomerNotes').value.trim();
+
+      if (!name || !phone || !date || !location) {
+        showToast('Required Information Missing', 'Please fill in your name, phone, date, and event location.', 'warning');
+        return;
+      }
+
+      if (state.cart.length === 0) {
+        showToast('Empty Cart', 'Please add items to your catering order.', 'warning');
+        return;
+      }
+
+      // Format order summary for mailto fallback
+      const itemsSummary = state.cart.map(i => `- ${i.quantity}x ${i.title} (${i.portion})`).join('%0D%0A');
+      const emailBody = `Hello Jennifer,%0D%0A%0D%0AI would like to submit a catering order request for SoNo Catering:%0D%0A%0D%0AItems Requested:%0D%0A${itemsSummary}%0D%0A%0D%0ACustomer Details:%0D%0AName: ${encodeURIComponent(name)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AEvent Date: ${encodeURIComponent(date)}%0D%0ALocation: ${encodeURIComponent(location)}%0D%0ASpecial Notes: ${encodeURIComponent(notes)}%0D%0A%0D%0APlease let me know your availability and confirmation details.`;
+
+      // Clear cart
+      state.cart = [];
+      saveCart();
+      toggleCartDrawer();
+
+      // Trigger mail client or direct notification
+      window.location.href = `mailto:jiannacone77@aol.com?subject=${encodeURIComponent("SoNo Catering Order Request from " + name)}&body=${emailBody}`;
+
+      showToast('Order Request Submitted!', `Thank you ${name}. Jennifer will review your request and get in touch directly.`, 'success');
+    }
+
+    // --- Modal Enquiry Handlers ---
+    function openEnquiryModal(prefillService = '') {
+      const modal = document.getElementById('enquiryModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        if (prefillService) {
+          const sel = document.getElementById('modalService');
+          if (sel) {
+            for (let opt of sel.options) {
+              if (opt.text.toLowerCase().includes(prefillService.toLowerCase())) {
+                sel.value = opt.value;
+                break;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    function closeEnquiryModal() {
+      const modal = document.getElementById('enquiryModal');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function handleModalEnquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('modalName').value.trim();
+      const phone = document.getElementById('modalPhone').value.trim();
+      const email = document.getElementById('modalEmail').value.trim();
+      const date = document.getElementById('modalDate').value;
+      const guests = document.getElementById('modalGuests').value;
+      const service = document.getElementById('modalService').value;
+      const notes = document.getElementById('modalNotes').value.trim();
+
+      const mailBody = `Hello Jennifer,%0D%0A%0D%0AI would like to enquire about an upcoming event with SoNo Catering:%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AEvent Date: ${encodeURIComponent(date)}%0D%0AEstimated Guests: ${encodeURIComponent(guests)}%0D%0AService Needed: ${encodeURIComponent(service)}%0D%0ANotes/Location: ${encodeURIComponent(notes)}`;
+
+      closeEnquiryModal();
+      window.location.href = `mailto:jiannacone77@aol.com?subject=${encodeURIComponent("SoNo Event Enquiry from " + name)}&body=${mailBody}`;
+      showToast('Enquiry Sent!', 'Thank you for reaching out. We will connect with you shortly.');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const phone = document.getElementById('formPhone').value.trim();
+      const eventType = document.getElementById('formEventType').value;
+      const date = document.getElementById('formDate').value;
+      const location = document.getElementById('formLocation').value.trim();
+      const guests = document.getElementById('formGuests').value;
+      const service = document.getElementById('formServiceRequirement').value;
+      const notes = document.getElementById('formNotes').value.trim();
+
+      const mailBody = `Hello Jennifer,%0D%0A%0D%0AHere are my event details for SoNo Catering:%0D%0A%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AEvent Type: ${encodeURIComponent(eventType)}%0D%0ADate: ${encodeURIComponent(date)}%0D%0ALocation: ${encodeURIComponent(location)}%0D%0AGuest Count: ${encodeURIComponent(guests)}%0D%0AService: ${encodeURIComponent(service)}%0D%0ANotes: ${encodeURIComponent(notes)}`;
+
+      document.getElementById('contactForm').reset();
+      window.location.href = `mailto:jiannacone77@aol.com?subject=${encodeURIComponent("Event Enquiry: " + eventType + " - " + name)}&body=${mailBody}`;
+      showToast('Enquiry Received!', 'Thank you! Jennifer will review your event specifics and contact you shortly.');
+    }
+
+    // --- Lightbox Viewer ---
+    function openLightbox(imgSrc, captionText) {
+      const box = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const caption = document.getElementById('lightboxCaption');
+      if (box && img) {
+        img.src = imgSrc;
+        caption.textContent = captionText || 'SoNo Catering';
+        box.classList.remove('hidden');
+      }
+    }
+
+    function closeLightbox() {
+      const box = document.getElementById('lightboxModal');
+      if (box) box.classList.add('hidden');
+    }
+
+    // --- Menu Category Filter ---
+    function filterMenuCategory(cat) {
+      const cards = document.querySelectorAll('.menu-card');
+      const buttons = document.querySelectorAll('.menu-cat-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-category') === cat) {
+          btn.className = "menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-brand-red text-white transition-colors";
+        } else {
+          btn.className = "menu-cat-btn px-5 py-2 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors";
+        }
+      });
+
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // --- Gallery Filter ---
+    function filterGallery(cat) {
+      const items = document.querySelectorAll('.gal-item');
+      const buttons = document.querySelectorAll('.gal-cat-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = "gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-brand-red text-white";
+        } else {
+          btn.className = "gal-cat-btn px-4 py-1.5 rounded-full text-xs font-bold bg-stone-100 text-stone-700 hover:bg-stone-200";
+        }
+      });
+
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    // --- FAQ Accordion ---
+    function toggleFaq(id) {
+      const el = document.getElementById(id);
+      const icon = document.getElementById(`${id}-icon`);
+      if (el) {
+        const isClosed = el.classList.contains('hidden');
+        el.classList.toggle('hidden');
+        if (icon) {
+          icon.className = isClosed ? "ph ph-caret-up text-brand-red" : "ph ph-caret-down text-brand-red";
+        }
+      }
+    }
+
+    // --- Toast Alert Notification ---
+    let toastTimeout;
+    function showToast(title, message, type = 'success') {
+      const toast = document.getElementById('toastNotification');
+      const tTitle = document.getElementById('toastTitle');
+      const tMsg = document.getElementById('toastMessage');
+      const tIcon = document.getElementById('toastIcon');
+
+      if (!toast) return;
+
+      clearTimeout(toastTimeout);
+      tTitle.textContent = title;
+      tMsg.textContent = message;
+
+      if (type === 'warning') {
+        tIcon.className = "ph-fill ph-warning-circle text-amber-500 text-2xl flex-shrink-0 mt-0.5";
+      } else {
+        tIcon.className = "ph-fill ph-check-circle text-brand-red text-2xl flex-shrink-0 mt-0.5";
+      }
+
+      toast.classList.remove('translate-y-32');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-32');
+      }, 4500);
+    }
+  </script>
+</body>
+</html>
